@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class Options {
+
     private final Map<String, String> settings = new HashMap<>();
 
     public Options() {
