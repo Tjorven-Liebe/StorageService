@@ -16,12 +16,12 @@ public class Logger {
 
     public void log(Throwable throwable) {
         String error = translateAlternateColorCodes(LoggingLevel.ERROR.getText());
-        System.out.println(error + " " + throwable.getMessage());
+        out.println(error + " " + throwable.getMessage());
         for (StackTraceElement stackTraceElement : throwable.getStackTrace()) {
-            System.out.println(error + " " + stackTraceElement);
+            out.println(error + " " + stackTraceElement);
         }
-        System.out.print(error + " For a more detailed log, don't use Logger");
-        System.out.println(translateAlternateColorCodes("§r"));
+        out.print(error + " For a more detailed log, don't use Logger");
+        out.println(translateAlternateColorCodes("§r"));
     }
 
     public void logRaw(String string) {
